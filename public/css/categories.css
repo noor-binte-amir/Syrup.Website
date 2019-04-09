@@ -1,0 +1,101 @@
+.divider-1 {
+    padding: 25px 0 15px 0;
+}
+
+.divider-1 .line {
+    width: 160px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #ccc;
+}
+
+.text-block {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 70px;
+    width: 50%;
+    height: 90%;
+}
+
+.text-block-categories {
+    position: absolute;
+    bottom: 45%;
+    left: 20%;
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.bar {
+    width: 0%;
+    height: 4px;
+    background: white;
+    transition: all 1s ease-in-out;
+}
+
+.div-right {
+    background: grey;
+    height: 90vh;
+    background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/summer-cocktails-peter-graham.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.div-left {
+    background-color: #ebc79e;
+    height: 90vh;
+}
+
+.padder:hover > .text-block-categories > .bar {
+    width: 100%;
+}
+
+#categoryimg:hover {
+    filter: brightness(70%);
+}
+
+#categoryimg {
+    width: 100%;
+}
+
+.padder {
+    overflow: hidden;
+    padding: 2%;
+}
+
+.padder:hover img {
+    transform: scale(1.05);
+}
+
+.padder img {
+    transition: 0.6s ease;
+}
+
+@media only screen and (max-width: 992px) {
+    /* For tablets: */
+    .text-block {
+        font-size: 65px;
+        width: 100%;
+    }
+    .text-block-categories {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* For phones: */
+    .text-block {
+        font-size: 40px;
+    }
+
+    .text-block-categories {
+        font-size: 30px;
+    }
+}
+
+/* ------------------------------Categories Page CSS ENDS-----------------------------------*/

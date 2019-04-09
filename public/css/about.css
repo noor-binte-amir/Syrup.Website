@@ -1,0 +1,271 @@
+/*            Noor            */
+
+.text-block-right {
+    font-family: "Helvetica", sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.175;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    left: 10%;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 5px solid #ebc79e;
+}
+
+.underline {
+    font-family: "Helvetica Neue LT Pro", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.9;
+    padding-bottom: 0.1em;
+}
+
+.syrup {
+    font-size: 30px;
+}
+
+.text-block-left {
+    font-family: "Helvetica", sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.175;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    left: 10%;
+    top: 26%;
+}
+
+/*            Mobile Display CSS            */
+/* body,
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+} */
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: "Montserrat-Black";
+    src: url(../fonts/Montserrat-Black.otf);
+}
+
+/*                                PRODUCT - COMMON                    */
+
+.product {
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+.product-image {
+    width: 50%;
+    position: relative;
+    pointer-events: auto;
+}
+
+.product-panel,
+.product-panel-top,
+.product-panel-level3,
+.product-panel-level4 {
+    width: 0%;
+    position: relative;
+    pointer-events: auto;
+}
+
+/* All bg-common will scroll bu teaser-bg will not so treated seperately */
+.bg-common,
+.teaser-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+    background-repeat: repeat-y;
+    height: 100%;
+    width: 100%;
+}
+
+/*                              TEASER                    */
+
+.teaser {
+    transition: transform 800ms cubic-bezier(0.07, 0.35, 0.72, 0.96);
+}
+/* transition class for teaser image */
+
+.teaser.scroll-down {
+    transform: translateY(100%);
+}
+
+.teaser-bg {
+    background-image: url(../images/panel-bg.jpg);
+}
+
+/*                                BACKGROUNDS                           */
+
+.bg1 {
+    background-image: url(../images/panel-bg.jpg);
+}
+
+.bg2 {
+    background-image: url(../images/panel-bg.jpg);
+}
+
+.bg3 {
+    background-image: url(../images/panel-bg.jpg);
+}
+
+#product-2 {
+    top: 233%;
+}
+
+/*                Laptop and above Media CSS          */
+@media only screen and (min-width: 1000px) {
+    .teaser-bg {
+        background-image: url(../images/panel-bg.jpg);
+    }
+
+    /*                                BACKGROUNDS                           */
+
+    .bg1 {
+        background-image: url(../images/panel2-bg.jpg);
+    }
+
+    .bg2 {
+        background-image: url(../images/panel3-bg.jpg);
+    }
+
+    .bg3 {
+        background-image: url(../images/panel4-bg.jpg);
+    }
+    .description {
+        font-size: 12px;
+    }
+
+    .teaser {
+    }
+
+    #product-2 {
+        top: 215%;
+    }
+
+    #product-3 {
+        top: 315%;
+    }
+
+    #product-4 {
+        top: 415%;
+    }
+
+    #product-5 {
+        top: 515%;
+    }
+
+    #product-6 {
+        top: 615%;
+    }
+
+    .product-image {
+        width: 35%;
+    }
+    .product-panel {
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        height: 100vh;
+    }
+    .product-panel-top {
+        bottom: 100%;
+
+        height: 100vh;
+
+        position: absolute;
+        width: 100%;
+        left: 0%;
+    }
+
+    .product-panel-level3 {
+        bottom: 100vh;
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        height: 100vh;
+    }
+    .product-panel-level4 {
+        bottom: 200vh;
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        height: 100vh;
+    }
+    .text-block-right {
+        bottom: -268%;
+        left: 60%;
+    }
+}
+
+.footerheight {
+    height: 670px !important;
+}
+
+/*                Desktop Media CSS          */
+
+@media only screen and (min-width: 1200px) {
+    .top-section .navbar-light .navbar-nav .nav-link {
+        font-size: 1vw;
+    }
+    #nav .navbar-light .navbar-nav .nav-link {
+        font-size: 1vw;
+    }
+    .description {
+        font-size: 1vw;
+    }
+    .description:first-child::before {
+        font-size: 2vw;
+    }
+
+    /* transition class for teaser image */
+    .teaser.scroll-one {
+        transform: translateY(200vh);
+    }
+
+    .teaser.scroll-two {
+        transform: translateY(400vh);
+    }
+
+    .teaser.scroll-three {
+        transform: translateY(600vh);
+    }
+
+    .teaser.scroll-four {
+        transform: translateY(800vh);
+    }
+    #product-name-row h1 {
+        font-size: 5vw;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* For tablets: */
+    .text-block-left,
+    .text-block-right {
+        font-size: 73px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* For phones: */
+    .text-block-left,
+    .text-block-right {
+        font-size: 40px;
+    }
+    .footerheight{
+        he
+    }
+}

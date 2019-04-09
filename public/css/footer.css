@@ -1,0 +1,104 @@
+footer.nb-footer {
+    background-image: url(../images/bg.png);
+    border-top: 4px solid #ca6e52;
+    position: relative;
+    z-index: 100000000;
+}
+
+footer.nb-footer .about {
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 1170px;
+    text-align: center;
+}
+footer.nb-footer .about p {
+    font-size: 13px;
+    color: #999;
+    margin-top: 30px;
+}
+footer.nb-footer .about {
+    margin-top: 15px;
+    margin-bottom: 4%;
+}
+footer.nb-footer .about ul li a {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #ca6e52;
+}
+footer.nb-footer .about ul li a:hover {
+    background: #ca6e52;
+    color: #fff;
+    border-color: #ca6e52;
+}
+footer.nb-footer .footer-info-single {
+    margin-top: 30px;
+}
+footer.nb-footer .footer-info-single .title {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-left: 4px solid #ca6e52;
+    padding-left: 5px;
+}
+
+footer.nb-footer .footer-info-single ul li a {
+    display: block;
+    color: #aaa;
+    padding: 2px 0;
+}
+footer.nb-footer .footer-info-single ul li a:hover {
+    color: #ca6e52;
+}
+footer.nb-footer .footer-info-single p {
+    font-size: 13px;
+    line-height: 20px;
+    color: #aaa;
+}
+footer.nb-footer .copyright {
+    margin-top: 15px;
+    background-image: url("images/bg.png") repeat;
+    padding: 7px 0;
+    color: #999;
+}
+footer.nb-footer .copyright p {
+    margin: 0;
+    padding: 0;
+}
+
+.bigpixi-footer-social {
+    margin-left: auto;
+    margin-top: 8px;
+}
+
+.bigpixi-footer-social__list-item {
+    display: inline-block;
+    margin-left: 16px;
+}
+.bigpixi-footer__icon-link {
+    display: inline-block;
+    -webkit-transition: 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.bigpixi-footer-social__icon {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+}
+.bigpixi-footer-social__icon:hover {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    padding: 2px;
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 480px) {
+    /* For phones: */
+    footer.nb-footer .about {
+        text-align: left;
+    }
+}

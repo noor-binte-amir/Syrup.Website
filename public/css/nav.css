@@ -1,0 +1,164 @@
+:root {
+    /* COLORS */
+    --buttons: #c8c386;
+    --button_text: white;
+    --header_text: white;
+    --navlink_text: white;
+    --navbars: white;
+    --header_text_mobile: slategray;
+    --navlink_text_mobile: slategray;
+    --navbars_mobile: slategray;
+}
+
+/* ------------------------------Navbar CSS -----------------------------------*/
+a.btn-link-3 {
+    color: var(--button_text);
+    background: var(--buttons);
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 3px 15px;
+    border-radius: 6px;
+}
+
+
+.brand {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navbrand {
+    background: url("../images/logo-dark.png");
+}
+
+a.navbar-brand {
+    font-size: 25px;
+}
+
+a.nav-link,
+a.nav-link.dropdown-toggle,
+a.btn.btn-link-3 {
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 20px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+a.nav-link {
+    color: var(--navlink_text);
+    text-decoration: none;
+}
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+}
+
+.header {
+    color: var(--header_text);
+}
+
+.header.active {
+    background: var(--header_text);
+}
+
+/* .header.active * {
+    color: slategray;
+} */
+
+/* div.dropdown-menu.show.active {
+    background-color: white;
+}
+
+div.dropdown-menu.active {
+    background-color: white;
+} */
+
+/* a.btn-link-3.active {
+    color: white;
+} */
+
+/* .fas.fa-bars.active {
+    color: slategray;
+} */
+
+/* a.navbar-brand {
+    background-image: url('../images/logo.png');
+    width: 10%;
+    height: 30px;
+    transition: all 0.2s ease;
+} */
+
+/* .header.active a.navbar-brand {
+    background-image: url('../images/logo-dark.png');
+} */
+
+/* div.dropdown-menu.show {
+    background-color: transparent;
+    border: none;
+} */
+
+/* a.dropdown-item:hover {
+    background-color: #ebc79e;
+} */
+
+@media only screen and (max-width: 992px) {
+
+    /* For tablets: */
+    .fas.fa-bars {
+        color: var(--navbars);
+    }
+
+    a.btn-link-3 {
+        position: relative;
+        display: inline-block;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        padding: 3px 15px;
+        border-radius: 6px;
+    }
+
+    a.nav-link.dropdown-toggle {
+        padding-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* For phones: */
+    .header {
+        background-color: white;
+    }
+
+    .header * {
+        color: var(--header_text_mobile);
+    }
+
+    a.nav-link {
+        color: var(--navlink_text_mobile);
+        text-decoration: none;
+    }
+
+    a.btn-link-3 {
+        position: relative;
+        display: inline-block;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        padding: 3px 15px;
+        border-radius: 6px;
+    }
+
+    a.nav-link.dropdown-toggle {
+        padding-left: 0px;
+    }
+
+    .fas.fa-bars {
+        color: var(--navbars_mobile);
+    }
+}
+
+/* ------------------------------Navbar CSS ENDS-----------------------------------*/

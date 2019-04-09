@@ -1,0 +1,302 @@
+body {
+    font-size: 0.9rem;
+}
+
+.marginSetting {
+    margin-top: 27%;
+}
+
+.divider-1 {
+    padding: 25px 0 15px 0;
+}
+
+.div-right {
+    background: grey;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.divider-1 .line {
+    width: 160px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #ccc;
+}
+
+h6 {
+    font-size: 0.9rem;
+}
+
+a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(226, 105, 65);
+}
+
+.div-header {
+    background: grey;
+    height: 90vh;
+    background-image: url(../images/bg_10.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Bottom right text */
+.text-block {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    width: 100%;
+    height: 90%;
+}
+
+iframe {
+    min-width: 100px !important;
+}
+
+.restaurant-image-container {
+    padding-top: 2%;
+    position: relative;
+}
+
+.div-right-dishes,
+.div-left-info,
+.div-left-comments,
+.div-right-instagram {
+    /* height: 90vh; */
+    padding: 0;
+}
+
+.div-right-dishes,
+.div-left-info {
+    margin-top: 4%;
+}
+
+.div-right-dishes {
+    margin-top: 10%;
+}
+
+.card {
+    width: 100%;
+    /* height: 106%; */
+}
+
+.card-title {
+    font-size: 40px;
+    color: darksalmon;
+}
+
+.info-card .card-body * {
+    margin: 2% 0;
+}
+
+.info-card .list-group-item {
+    font-size: 30px;
+}
+
+.ratings {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5% 0;
+    height: 70vh;
+    background-attachment: fixed;
+}
+
+.ratings h3 {
+    color: white;
+}
+
+.avatar {
+    object-fit: cover;
+    height: 17vh;
+}
+
+.comment {
+    height: 20%;
+}
+
+.comment-card .card-body {
+    overflow: auto;
+}
+
+.card-body {
+    padding: 4.25rem;
+}
+
+.favourite,
+.wishlist {
+    background: transparent;
+    border: 4px solid white;
+    padding: 10px;
+    color: white;
+    border-radius: 50px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-top: 2%;
+    margin-left: 15px;
+}
+
+.favourite:hover,
+.wishlist:hover {
+    background: #e9724c;
+    color: white;
+}
+
+/* SVG BUTTON CSS */
+
+.restaurantcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ededed;
+}
+
+.menu-button {
+    transition: fill 500ms;
+}
+
+.outer-circle {
+    transform-origin: 60px 60px;
+    transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+}
+
+.button {
+    max-width: 12rem;
+    background: none;
+    border: 0 none;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.button svg {
+    width: 100%;
+    height: auto;
+}
+
+.button:hover .menu-button {
+    fill: salmon;
+}
+
+.button:hover .outer-circle {
+    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .div-right-instagram,
+    .div-right-dishes {
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* For tablets: */
+    .text-block {
+        font-size: 65px;
+    }
+
+    .card {
+        height: 70%;
+    }
+
+    .ratings {
+        margin-top: -20%;
+    }
+
+    .commentbox {
+        height: 95%;
+    }
+
+    .div-right-dishes {
+        margin-top: -20%;
+    }
+
+    .avatar {
+        object-fit: cover;
+        height: 10vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* For phones: */
+    .text-block {
+        font-size: 40px;
+    }
+
+    .card {
+        height: 95%;
+    }
+
+    .ratings {
+        margin-top: -20%;
+    }
+
+    .marginSetting {
+        margin-top: 50%;
+    }
+
+    .div-right-instagram,
+    .div-right-dishes {
+        margin-top: -17%;
+    }
+
+    .avatar {
+        object-fit: cover;
+        height: 5vh;
+    }
+}
+
+.rating-ambiance,
+.rating-taste,
+.rating-presentation,
+.rating-value {
+    text-align: center;
+}
+
+.changedp {
+    background: #ffccc0;
+    border: 4px solid white;
+    padding: 5px;
+    color: #2f323a;
+    border-radius: 50px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.changedp:hover {
+    background: #2f323a;
+    color: white;
+}
+
+.contribute {
+    background: #ffccc0;
+    border: 4px solid white;
+    padding: 17px;
+    color: #2f323a;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.contribute:hover {
+    background: #2f323a;
+    color: white;
+}
+
+/* input[type="file"] {
+    display: none;
+} */

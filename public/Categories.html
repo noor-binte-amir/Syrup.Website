@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Categories</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/categories.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <!-- Add additional services that you want to use -->
+    <!--
+            <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+        -->
+    <script src="js/app.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+    <nav class="header navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand brand" href="index.html"><b>SYRUP</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="navbar-nav mr-auto"></ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">ABOUT <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FoodFilter.html">FOOD FILTER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Categories.html">CATEGORIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="UserProfilePage.html" class="nav-link">PROFILE</a>
+                    </li>
+                    <li><a class="btn btn-link-3" href="Sign-in.html">LOG IN</a></li>
+                    <li><a class="btn btn-link-3" href="Sign-up.html">SIGN UP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-none d-lg-block col-lg-6 div-left"></div>
+            <div class="col-sm-12 col-lg-6 div-right"></div>
+            <div class="text-block">CATEGORIES</div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="divider-1">
+        <div class="line"></div>
+    </div>
+    <br />
+    <br />
+
+    <div class="container-fluid category-section">
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-3 padder">
+                <img id="categoryimg" src="https://i.pinimg.com/564x/cb/b0/6e/cbb06e8ca780bb5f7a2f32422d88e4df.jpg" alt="" />
+                <div class="text-block-categories" style="left:15%">
+                    Chinese
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 padder">
+                <img id="categoryimg" src="https://i.pinimg.com/564x/5e/9a/0f/5e9a0f6161193a38a7126b177eecdf05.jpg" alt="" />
+                <div class="text-block-categories">
+                    Fast Food
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 padder">
+                <img id="categoryimg" src="images/popular3.jpg" alt="" />
+                <div class="text-block-categories">
+                    Cafe
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 padder">
+                <img id="categoryimg" src="images/popular4.jpg" alt="" />
+                <div class="text-block-categories">
+                    Barbeque
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <!-- <div class="col-6 col-md-4 col-lg-3 padder">
+                    <img id="categoryimg" src="images/popular10.jpg" alt="" />
+                    <div class="text-block-categories" style="left:15%">
+                        Fast Food
+                        <div class="bar"></div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3 padder">
+                    <img
+                        id="categoryimg"
+                        src="https://images.unsplash.com/photo-1454334281609-87a89762912c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b94887cb7166b4f15e25c4e42956853c&auto=format&fit=crop&w=332&q=80"
+                        alt=""
+                    />
+                    <div class="text-block-categories">
+                        Cheap Eats
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 padder">
+                    <img id="categoryimg" src="images/popular7.jpg" alt="" />
+                    <div class="text-block-categories" style="left:10%">
+                        Fine Dine
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 padder">
+                    <img
+                        id="categoryimg"
+                        src="https://images.unsplash.com/photo-1454334281609-87a89762912c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b94887cb7166b4f15e25c4e42956853c&auto=format&fit=crop&w=332&q=80"
+                        alt=""
+                    />
+                    <div class="text-block-categories" style="left:10%">
+                        Desi
+                        <div class="bar"></div>
+                    </div>
+                </div> -->
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="divider-1">
+        <div class="line"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <footer class="nb-footer footerbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="about">
+                        <br />
+
+                        <img src="images/logo-dark.png" class="img-responsive center-block" alt="" />
+                        <p>
+                            SYRUP is a website to help users to search for popular restuarants
+                            and places they want to visit. It provides foodies a platform to
+                            share their experience SYRUP is a website to help users to search
+                            for popular restuarants and places they want to visit. It provides
+                            foodies a platform to share their experience at different eatries
+                            and benefit others from their views.
+                        </p>
+
+                        <br />
+                        <div class="bigpixi-footer-social">
+                            <ul>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://twitter.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Twitter" title="Twitter" src="http://simpleicons.org/icons/twitter.svg" />
+                                    </a>
+                                </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.facebook.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Facebook" title="Facebook" src="http://simpleicons.org/icons/facebook.svg" />
+                                    </a>
+                                </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.youtube.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="YouTube" title="YouTube" src="http://simpleicons.org/icons/youtube.svg" />
+                                    </a>
+                                </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.instagram.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Instagram" title="Instagram" src="http://simpleicons.org/icons/instagram.svg" />
+                                    </a>
+                                </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.pinterest.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Pinterest" title="Pinterest" src="http://simpleicons.org/icons/pinterest.svg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Help Center</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Features</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Site Info</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Customer information</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Your Items</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Your blogs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Security & privacy</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Return / Refund
+                                    Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" title=""><i class="fa fa-angle-double-right"></i> Sponser / User
+                                    privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 15%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Payments</h2>
+                        <p>
+                            All payments are to be made through online bank tranfer no easy
+                            paisa or cash on delivery is accepted.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12" style="text-align:center">
+                        <p>Copyright © 2018. All rights reserved for SYRUP</p>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script>
+        $('.text-block-categories').click(function (e) {
+            e.preventDefault();
+            var categoryNode = e.target;
+            var categoryName = categoryNode.innerText.trim();
+            console.log(categoryName);
+            localStorage.setItem('categoryToSearch', categoryName);
+            window.location.href = 'CategoryResults.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+* {
+    font-family: "Helvetica", cursive;
+}
+
+.restaurantbutton {
+    background: transparent;
+    border: 4px solid white;
+    padding: 5px;
+    color: white;
+    border-radius: 50px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin: 1%;
+    height: 7%;
+}
+
+.public:hover {
+    background: #f9e7e7;
+    color: #2f323a;
+}
+
+.push {
+    top: 5%;
+}
+.menu-image-container,
+.menu {
+    text-align: center;
+}
+
+.menu {
+    margin: 2% 0 0;
+}
+.menu-titles {
+    border-bottom: 2px solid grey;
+    height: 25vh;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-title {
+    position: relative;
+    z-index: 5;
+    font-family: Montserrat;
+}
+
+.menu-title-bg {
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    transform: translate(0, 0px);
+    height: 200%;
+    width: 100%;
+    background: url(http://www.todayifoundout.com/wp-content/uploads/2010/03/pizza2-1000x200.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.75s ease;
+}
+
+.menu-items {
+}
+.menu-item {
+    margin: 3% 0%;
+}
+
+.menu-image-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/menu-image.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100vw; */
+    height: 100vh;
+}
+.menu-image-container p,
+.menu-image-container h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.menu-image-container p {
+    font-size: 25px;
+}
+
+.open-close-menu-type {
+    float: right;
+}
+
+/* Animations Seperation  */
+.fa-plus-square {
+    transition: all 0.75s ease;
+}
+
+.icon-rotate {
+    transform: rotate(135deg);
+}
+
+.menu-titles:hover > .menu-title-bg {
+    opacity: 0.75;
+    transform: translate(0, -80px);
+}
+.menu-items-toggle {
+    /* max-height: 0; */
+}
+
+.item-name,
+.menu-title {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 480px) {
+    /* For phones: */
+    .item-name {
+        font-size: 14px;
+    }
+    .menu-titles {
+        height: 100px;
+    }
+    .menu-title {
+        font-size: 20px;
+    }
+}

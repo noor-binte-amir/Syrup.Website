@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--===============================================================================================-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Fancy Button -->
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <!-- Footer -->
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- Navbar -->
+    <link rel="stylesheet" href="css/nav.css">
+    <!-- Progress Circles -->
+    <link rel="stylesheet" href="css/progress.css">
+    <!-- Carousel -->
+    <link rel="stylesheet" href="css/action-grid-slider.css">
+    <!-- Home Page -->
+    <link href="css/home-page.css" rel="stylesheet" />
+    <!-- Star Bars -->
+    <link href="css/star.css" rel="stylesheet" />
+    <!-- DP Uploading -->
+    <link rel="stylesheet" href="css/ReviewForm.css">
+    <link rel="stylesheet" href="css/uploadProfilePhoto.css">
+    <!-- Restaurant CSS -->
+    <link title="restaurant" rel="stylesheet" href="css/restaurant.css">
+    <!--===============================================================================================-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Restaurant</title>
+
+</head>
+
+<body>
+    <!--===============================================================================================-->
+
+    <nav class="header navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand brand" href="index.html"><B>SYRUP</B></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="nav-item">
+                        <a href="UserProfilePage.html" class="nav-link">My Profile</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">ABOUT <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FoodFilter.html">FOOD FILTER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Categories.html">CATEGORIES</a>
+                    </li>
+                    <li><a id="signin" class="btn btn-link-3" href="Sign-in.html">LOG IN</a></li>
+                    <li><a id="signup" class="btn btn-link-3" href="Sign-up.html">SIGN UP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--===============================================================================================-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 div-right" id="#restaurantCover">
+            </div>
+            <div class="text-block" id="restaurantName">
+                <!-- restaurant name -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contribution -->
+    <div class="container">
+        <div class="row">
+            <div class="wrap-contact1002 col-11">
+                <button class="contact100-btn-hide2">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </button>
+
+                <div class="contact100-form">
+                    <span class="contact100-form-title">
+                        Upload Photo
+                    </span>
+                    <div id="filesubmit">
+                        <div class="container-contact100-form-btn">
+                            <input class="file-select" type="file" accept="image/*">
+                            </input>
+                        </div>
+                        <div class="container-contact100-form-btn2">
+                            <button id="contributebtn" class="contact100-form-btn2 file-submit">
+                                <span>
+                                    Submit
+                                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <section class="infoSlider">
+
+            <div class="row justify-content-center align-items-center">
+                <div class="info-card  col-sm-10 col-lg-5 div-left-info">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Overview</h1>
+                            <h6 class="mb-2 text-muted">
+                                <div>
+                                    Overall Rating
+                                    <span id="full-stars-example-one">
+                                        <span class="rating-group">
+                                            <input disabled checked class="rating__input rating__input--none" name="rating3"
+                                                id="rating3-none" value="0" type="radio">
+                                            <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-1" value="1"
+                                                type="radio">
+                                            <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-2" value="2"
+                                                type="radio">
+                                            <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-3" value="3"
+                                                type="radio">
+                                            <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-4" value="4"
+                                                type="radio">
+                                            <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-5" value="5"
+                                                type="radio">
+
+                                            <label aria-label="6 stars" class="rating__label" for="rating3-6"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-6" value="6"
+                                                type="radio">
+                                            <label aria-label="7 stars" class="rating__label" for="rating3-7"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-7" value="7"
+                                                type="radio">
+                                            <label aria-label="8 stars" class="rating__label" for="rating3-8"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-8" value="8"
+                                                type="radio">
+                                            <label aria-label="9 stars" class="rating__label" for="rating3-9"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-9" value="9"
+                                                type="radio">
+                                            <label aria-label="10 stars" class="rating__label" for="rating3-10"><i
+                                                    class="rating__icon rating__icon--star fa fa-star"></i></label>
+                                            <input disabled class="rating__input" name="rating3" id="rating3-10" value="10"
+                                                type="radio">
+
+                                        </span>
+                                    </span>
+                                    <span id="#rating">0</span></div>
+
+                                <div>
+                                    Your Rating
+                                    <span id="full-stars-example-two">
+                                        <span class="rating-grouptwo">
+                                            <input disabled checked class="rating__inputtwo rating__inputtwo--none"
+                                                name="ratinguser" id="rating-none" value="0" type="radio">
+                                            <label aria-label="1 userstars" class="rating__labeltwo" for="rating-1"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-1" value="1"
+                                                type="radio">
+                                            <label aria-label="2 userstars" class="rating__labeltwo" for="rating-2"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-2" value="2"
+                                                type="radio">
+                                            <label aria-label="3 userstars" class="rating__labeltwo" for="rating-3"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-3" value="3"
+                                                type="radio">
+                                            <label aria-label="4 userstars" class="rating__labeltwo" for="rating-4"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-4" value="4"
+                                                type="radio">
+                                            <label aria-label="5 userstars" class="rating__labeltwo" for="rating-5"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-5" value="5"
+                                                type="radio">
+
+                                            <label aria-label="6 userstars" class="rating__labeltwo" for="rating-6"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-6" value="6"
+                                                type="radio">
+                                            <label aria-label="7 userstars" class="rating__labeltwo" for="rating-7"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-7" value="7"
+                                                type="radio">
+                                            <label aria-label="8 userstars" class="rating__labeltwo" for="rating-8"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-8" value="8"
+                                                type="radio">
+                                            <label aria-label="9 userstars" class="rating__labeltwo" for="rating-9"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-9" value="9"
+                                                type="radio">
+                                            <label aria-label="10 userstars" class="rating__labeltwo" for="rating-10"><i
+                                                    class="rating__icontwo rating__icontwo--star fa fa-star"></i></label>
+                                            <input class="rating__inputtwo" name="ratinguser" id="rating-10" value="10"
+                                                type="radio">
+
+                                        </span>
+                                    </span>
+                                    <span id="#userRating">0</span></div>
+                            </h6>
+                            <h6 class="mb-2 text-muted ">Description</h6>
+                            <p class="card-text" id="#description"></p>
+                            <p class="location card-subtitle text-muted"><i class="far fa-clock"></i> &nbsp;<span id="#status"></span>
+                                <span id="#timings"></span></p>
+
+                            <p class="location card-subtitle text-muted"><i class="fas fa-map-marker-alt"></i>&nbsp;
+                                <span id="#address"></span>
+                            </p>
+                            <p class="location card-subtitle text-muted"><i class="fas fa-phone"></i>&nbsp;
+                                <span id="#phone"></span></p>
+                            <p class="location card-subtitle text-muted"><i class="fab fa-chrome"></i>&nbsp;
+                                <a id="#link" href="www.google.com"></a></p>
+                            <br />
+                            <a href="Menu.html" class="card-link" id="menu">
+
+                                <h5 class="mb-2 text-muted ">Check out our Menu</h5>
+
+                            </a>
+                            <br />
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="text-right ct-box-slider__arrows clearfix col-1 d-sm-none d-lg-block">
+                    <button id="ct-js-box-slider--next-1" type="button" class="slick-arrow button"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 120 120">
+                            <g fill="none" fill-rule="evenodd">
+
+                                <circle class="inner-circle" cx="60" cy="60" r="39" fill="#FFF" />
+
+                                <path class="menu-button" fill="gray" fill-rule="nonzero" d="M58.486 56.324H57.19c-.48 0-.866.387-.866.865v1.29c0 .48.387.86.865.86h1.29c.48 0 .86-.39.86-.87v-1.29c0-.48-.39-.87-.87-.87zm-4.324 0h-1.297c-.478 0-.865.387-.865.865v1.29c0 .48.387.86.865.86h1.297c.478 0 .865-.39.865-.87v-1.29c0-.48-.387-.87-.865-.87zM58.486 52H57.19c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.324 0h-1.297c-.478 0-.865.387-.865.865v1.297c0 .478.387.865.865.865h1.297c.478 0 .865-.387.865-.865v-1.297c0-.478-.387-.865-.865-.865zm12.973 4.324h-1.297c-.478 0-.865.387-.865.865v1.29c0 .48.387.86.865.86h1.297c.478 0 .865-.39.865-.87v-1.29c0-.48-.387-.87-.865-.87zm-4.324 0h-1.29c-.48 0-.86.387-.86.865v1.29c0 .48.39.86.87.86h1.3c.48 0 .87-.39.87-.87v-1.29c0-.48-.38-.87-.86-.87zM67.14 52h-1.3c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.324 0H61.52c-.48 0-.865.387-.865.865v1.297c0 .478.386.865.865.865h1.297c.48 0 .866-.387.866-.865v-1.297c0-.478-.386-.865-.864-.865zM58.49 64.973h-1.3c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.325 0h-1.297c-.478 0-.865.387-.865.865v1.297c0 .478.387.865.865.865h1.297c.478 0 .865-.387.865-.865v-1.297c0-.478-.388-.865-.866-.865zm4.324-4.324h-1.3c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.48 0 .86-.39.86-.87V61.5c0-.48-.39-.864-.87-.864zm-4.33 0h-1.3c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.472 0 .86-.39.86-.87V61.5c0-.48-.39-.864-.867-.864zm12.97 4.32h-1.29c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.48 0 .86-.39.86-.87v-1.29c0-.48-.387-.87-.865-.87zm-4.33 0h-1.29c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.3c.48 0 .862-.39.862-.87v-1.29c0-.48-.39-.87-.867-.87zm4.32-4.33h-1.3c-.48 0-.87.38-.87.86v1.3c0 .48.384.86.862.86h1.3c.476 0 .863-.39.863-.87V61.5c0-.48-.388-.864-.866-.864zm-4.33 0H61.5c-.48 0-.864.38-.864.86v1.3c0 .48.387.86.866.86H62.8c.48 0 .87-.39.87-.87V61.5c0-.48-.383-.864-.86-.864z" />
+
+                                <g class="outer-circle">
+                                    <circle cx="60" cy="60" r="53" stroke="salmon" transform="rotate(90 60 60)" />
+                                    <circle cx="60" cy="7" r="2" fill="salmon" />
+                                    <circle cx="60" cy="113" r="2" fill="salmon" />
+                                    <circle cx="113" cy="60" r="2" fill="salmon" />
+                                    <circle cx="7" cy="60" r="2" fill="salmon" />
+                                </g>
+
+                            </g>
+                        </svg></button>
+                    <button class="contact100-btn-show2 contribute" type="button"><i class="fas fa-plus fa-3x"
+                            aria-hidden="true"></i></i></button>
+                </div>
+
+                <!-- <div class="dishes-slider col-sm-10 col-lg-5 div-right-dishes">
+
+                    <div class="ct-box-slider-1 ct-js-box-slider row">
+                        <div class="item col-12 right">
+                            <div class="container-fluid ">
+                                <div class="row align-items-center">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item col-12 right">
+                            <div class="container-fluid">
+                                <div class="row">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->
+                <!-- Carousel -->
+                <div id="demo" style="" class="col-sm-10 col-lg-5 carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+
+                    <div class=" ct-box-slider-1 ct-js-box-slider row">
+                        <div class="item col-12 right" id="restaurantsliderouter1">
+                            <div class="row" id="restaurantsliderinner1">
+                            </div>
+                        </div>
+
+                        <div class="item col-12 right" id="restaurantsliderouter2">
+                            <div class="row" id="restaurantsliderinner2">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="container-fluid">
+        <section class="ratings inner-restaurant-image row" id="#ratingsCover">
+            <div class=" offset-sm-4 offset-md-8 col-md-4 col-sm-6s">
+                <button id="wishlistbtn" class="wishlist" type="button">Add to Wishlist <i class="far fa-star"></i></button>
+                <button id="favbtn" class="favourite"> Favourite <i class="far fa-heart"></i> </button>
+            </div>
+
+            <div class="rating-ambiance col-6 col-md-3">
+                <div class="progress" data-percentage="0" id="#ambiance">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar">
+                        </span>
+                    </span>
+                    <div class="progress-value">
+                        <div id="#ambiance-val">&nbsp;0%
+                        </div>
+                    </div>
+                </div>
+                <h3>Ambiance</h3>
+            </div>
+            <div class="rating-taste col-6 col-md-3">
+                <div class="progress" data-percentage="0" id="#taste">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar">
+                        </span>
+                    </span>
+                    <div class="progress-value">
+                        <div id="#taste-val">&nbsp;0%<br>
+                        </div>
+                    </div>
+                </div>
+                <h3>Taste</h3>
+            </div>
+            <div class="rating-presentation col-6 col-md-3">
+                <div class="progress" data-percentage="0" id="#presentation">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar">
+                        </span>
+                    </span>
+                    <div class="progress-value">
+                        <div id="#presentation-val">&nbsp;0%<br>
+                        </div>
+                    </div>
+                </div>
+                <h3>Presentation</h3>
+            </div>
+            <div class="rating-value col-6 col-md-3">
+                <div class="progress" data-percentage="0" id="#value">
+                    <span class="progress-left">
+                        <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                        <span class="progress-bar">
+                        </span>
+                    </span>
+                    <div class="progress-value">
+                        <div id="#value-val">&nbsp;0%<br>
+                        </div>
+                    </div>
+                </div>
+                <h3>Value</h3>
+            </div>
+        </section>
+    </div>
+
+    <section class="commentsSlider">
+        <div class="container ">
+            <div class="row">
+                <h1 class="card-title col-lg-6 col-8">Comments</h1>
+
+                <button class="contact100-btn-show changedp col-lg-2 col-4" type="button"><i class="fas fa-globe-asia"
+                        aria-hidden="true"></i>&nbsp;Add Review</i></button>
+
+                <h1 class="card-title col-8 col-lg-3">Blogger Reviews</h1>
+                <button class="contact100-btn-show3 changedp col-lg-1 col-4" type="button"><i class="fas fa-globe-asia"
+                        aria-hidden="true"></i>&nbsp;Add</i></button>
+            </div>
+        </div>
+        <!-- Commenting -->
+
+        <div class="container">
+            <div class="row">
+                <div class="wrap-contact100 ">
+                    <button class="contact100-btn-hide">
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="contact100-form validate-form">
+                        <span class="contact100-form-title">
+                            Review
+                        </span>
+
+                        <div class="wrap-input100 validate-input" data-validate="Message is required">
+                            <span class="label-input100">Review Content</span>
+                            <textarea id="#commentContent" class="input100" name="message" placeholder="Enter review here..."></textarea>
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="container-contact100-form-btn">
+                            <button id="submitbtn1" class="contact100-form-btn">
+                                <span>
+                                    Submit
+                                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instagram FORM -->
+        <div class="container">
+            <div class="row">
+                <div class="wrap-contact1003 ">
+                    <button class="contact100-btn-hide3">
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="contact100-form3 validate-form">
+                        <span class="contact100-form-title">
+                            Embed
+                        </span>
+
+                        <div class="wrap-input100 validate-input" data-validate="Message is required">
+                            <span class="label-input100">Embed Link</span>
+                            <textarea id="#commentContent" class="input100" name="embed" placeholder="Enter Link here..."></textarea>
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="container-contact100-form-btn">
+                            <button id="embedbtn" class="contact100-form-btn3">
+                                <span>
+                                    Confirm
+                                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container ">
+            <div class="row justify-content-center align-items-center">
+                <div class="comment-card col-md-11 col-lg-7 div-left-comments">
+
+                    <div class="card commentbox">
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush" id="#commentStructure">
+                                <!-- <li class="list-group-item">
+                                    <div class="comments row">
+                                        <img src="images/up.jpg" alt="" class="col-3 avatar rounded-circle">
+                                        <div class=" col-9">
+                                            <div class="row">
+                                                <h6 class="username col-12 card-subtitle">Taimur Azhar</h6>
+                                                <p class="date-posted card-text text-muted">November 12, 2017</p>
+                                                <p class="comment card-text"><span class="user-rating">5</span>
+                                                    Lorem
+                                                    ipsum dolor sit amet consectetur, adipisicing elit. Quidem deleniti
+                                                    quas
+                                                    voluptas. Perspiciatis, nihil repellendus? Nihil nemo iste minima
+                                                    veniam?
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-right ct-box-slider__arrows clearfix col-1 d-sm-none d-lg-block">
+                    <button id="ct-js-box-slider--next-1" type="button" class="slick-arrow button"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 120 120">
+                            <g fill="none" fill-rule="evenodd">
+
+                                <circle class="inner-circle" cx="60" cy="60" r="39" fill="#FFF" />
+
+                                <path class="menu-button" fill="gray" fill-rule="nonzero" d="M58.486 56.324H57.19c-.48 0-.866.387-.866.865v1.29c0 .48.387.86.865.86h1.29c.48 0 .86-.39.86-.87v-1.29c0-.48-.39-.87-.87-.87zm-4.324 0h-1.297c-.478 0-.865.387-.865.865v1.29c0 .48.387.86.865.86h1.297c.478 0 .865-.39.865-.87v-1.29c0-.48-.387-.87-.865-.87zM58.486 52H57.19c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.324 0h-1.297c-.478 0-.865.387-.865.865v1.297c0 .478.387.865.865.865h1.297c.478 0 .865-.387.865-.865v-1.297c0-.478-.387-.865-.865-.865zm12.973 4.324h-1.297c-.478 0-.865.387-.865.865v1.29c0 .48.387.86.865.86h1.297c.478 0 .865-.39.865-.87v-1.29c0-.48-.387-.87-.865-.87zm-4.324 0h-1.29c-.48 0-.86.387-.86.865v1.29c0 .48.39.86.87.86h1.3c.48 0 .87-.39.87-.87v-1.29c0-.48-.38-.87-.86-.87zM67.14 52h-1.3c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.324 0H61.52c-.48 0-.865.387-.865.865v1.297c0 .478.386.865.865.865h1.297c.48 0 .866-.387.866-.865v-1.297c0-.478-.386-.865-.864-.865zM58.49 64.973h-1.3c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.325 0h-1.297c-.478 0-.865.387-.865.865v1.297c0 .478.387.865.865.865h1.297c.478 0 .865-.387.865-.865v-1.297c0-.478-.388-.865-.866-.865zm4.324-4.324h-1.3c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.48 0 .86-.39.86-.87V61.5c0-.48-.39-.864-.87-.864zm-4.33 0h-1.3c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.472 0 .86-.39.86-.87V61.5c0-.48-.39-.864-.867-.864zm12.97 4.32h-1.29c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.48 0 .86-.39.86-.87v-1.29c0-.48-.387-.87-.865-.87zm-4.33 0h-1.29c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.3c.48 0 .862-.39.862-.87v-1.29c0-.48-.39-.87-.867-.87zm4.32-4.33h-1.3c-.48 0-.87.38-.87.86v1.3c0 .48.384.86.862.86h1.3c.476 0 .863-.39.863-.87V61.5c0-.48-.388-.864-.866-.864zm-4.33 0H61.5c-.48 0-.864.38-.864.86v1.3c0 .48.387.86.866.86H62.8c.48 0 .87-.39.87-.87V61.5c0-.48-.383-.864-.86-.864z" />
+
+                                <g class="outer-circle">
+                                    <circle cx="60" cy="60" r="53" stroke="salmon" transform="rotate(90 60 60)" />
+                                    <circle cx="60" cy="7" r="2" fill="salmon" />
+                                    <circle cx="60" cy="113" r="2" fill="salmon" />
+                                    <circle cx="113" cy="60" r="2" fill="salmon" />
+                                    <circle cx="7" cy="60" r="2" fill="salmon" />
+                                </g>
+
+                            </g>
+                        </svg></button>
+                    <button class="contact100-btn-show2 contribute" type="button"><i class="fas fa-plus fa-3x"
+                            aria-hidden="true"></i></i></button>
+                </div>
+
+
+
+                <div class="instagram-slider col-md-11 col-lg-4 div-right-instagram">
+                    <div class="ct-box-slider-2 ct-js-box-slider row align-items-center">
+
+                        <div class="item col-12 right" id="instarecyclerouter1">
+                            <!-- <div class="container-fluid"> -->
+                            <div class="row align-items-center" id="instarecyclerinner1">
+                                <!-- <div class="col-sm-10">
+                                    </div> -->
+                            </div>
+                            <!-- </div> -->
+                        </div>
+
+                        <div class="item col-12 right" id="instarecyclerouter2">
+                            <!-- <div class="container-fluid"> -->
+                            <div class="row align-items-center" id="instarecyclerinner2">
+                                <!-- <div class="col-sm-10">
+                                    </div> -->
+                            </div>
+                            <!-- </div> -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="divider-1">
+        <div class="line"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <footer class="nb-footer footerbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="about">
+                        <br>
+
+
+                        <img src="images/logo-dark.png" class="img-responsive center-block" alt="">
+                        <p>SYRUP is a website to help users to search for popular restuarants and places they want to
+                            visit. It provides
+                            foodies
+                            a platform to share their experience SYRUP is a website to help users to search for popular
+                            restuarants and
+                            places
+                            they want to visit. It provides foodies a platform to share their experience at different
+                            eatries and benefit
+                            others
+                            from their views.
+                        </p>
+
+                        <br>
+                        <div class="bigpixi-footer-social">
+                            <ul>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://twitter.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Twitter" title="Twitter" src="http://simpleicons.org/icons/twitter.svg">
+                                    </a> </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.facebook.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Facebook" title="Facebook" src="http://simpleicons.org/icons/facebook.svg">
+                                    </a> </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.youtube.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="YouTube" title="YouTube" src="http://simpleicons.org/icons/youtube.svg">
+                                    </a> </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.instagram.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Instagram" title="Instagram" src="http://simpleicons.org/icons/instagram.svg">
+                                    </a> </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.pinterest.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Pinterest" title="Pinterest" src="http://simpleicons.org/icons/pinterest.svg">
+                                    </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Help Center</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Features</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Site Info</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Customer information</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Your Items</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Your blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Security & privacy</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sponser / User privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 15%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Payments</h2>
+                        <p>All payments are to be made through online bank tranfer no easy paisa or cash on delivery is
+                            accepted.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12" style="text-align:center">
+                        <p>Copyright © 2018. All rights reserved for SYRUP</p>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script src="js/gridslider.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/restaurantpage.js"></script>
+    <!-- Form  -->
+    <script src="js/form.js"></script>
+    <script src="js/contribute.js"></script>
+    <script src="js/embed.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#menu').click(function (e) {
+                e.preventDefault();
+                var menuToSearch = $('#restaurantName').text();
+                localStorage.setItem('menuToSearch', menuToSearch);
+                console.log(localStorage.menuToSearch);
+                window.location.href = "Menu.html";
+
+            });
+        });
+    </script>
+    <script async src="http://www.instagram.com/embed.js"></script>
+
+
+</body>
+
+</html>

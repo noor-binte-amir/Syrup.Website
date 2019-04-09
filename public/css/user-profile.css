@@ -1,0 +1,321 @@
+input[type="file"] {
+    display: none;
+}
+
+a.navbar-brand {
+    /* background-image: url(../images/logo-dark.png); */
+    /* width: 25%; */
+    color: white;
+}
+
+.divider-1 {
+    padding: 25px 0 15px 0;
+}
+
+.divider-1 .line {
+    width: 160px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #ccc;
+}
+
+.divPositioning2 {
+    position: relative;
+    height: 300px;
+    /* overflow: hidden; */
+    /* padding: 0%; */
+}
+
+.h2,
+h2 {
+    font-size: 18px;
+}
+
+.verticalAlignText {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: relative;
+}
+
+.wrap {
+    display: flex;
+}
+
+.wrap span {
+    align-self: flex-end;
+}
+
+.imageTranslate {
+    transition: width 2s, height 1s, transform 0.5s;
+}
+
+.imageTranslate:hover {
+    transform: translate(40px, -30px);
+}
+
+.homeContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
+}
+
+.card {
+    border: 0px;
+    padding: 10px;
+    margin-top: -9%;
+    margin-left: 3%;
+    background-color: transparent;
+}
+
+.info {
+    height: 30px;
+}
+
+.ml-5,
+.mx-5 {
+    margin-left: 0rem !important;
+}
+
+.changedp {
+    background: #ffccc0;
+    border: 4px solid white;
+    padding: 5px;
+    color: #2f323a;
+    border-radius: 50px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.changedp:hover {
+    background: #2f323a;
+    color: white;
+}
+
+.col-lg-3 {
+    padding: 28px;
+}
+
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+}
+
+.divPositioning {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    padding: 0%;
+    background-attachment: fixed;
+    background-image: url(../images/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.imagePositioning {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cardShadow {
+    box-shadow: 5px 5px 8px grey;
+}
+
+.imageShadow {
+    box-shadow: 5px 0px 8px grey;
+}
+
+.userIcons {
+    width: 20px;
+    height: 20px;
+}
+
+.imagePlacement {
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 8%;
+    width: 100px;
+}
+
+.contributedPhotos {
+    float: left;
+    margin-left: 2%;
+}
+
+.commentPlacement {
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.card {
+    height: 50%;
+}
+
+.headingWishlist {
+    padding-left: 15px;
+}
+
+.otherheading {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.ct-box img {
+    height: 27vh;
+}
+
+p {
+    font-size: 14.4px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.textual {
+    font-size: 16px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 1%;
+}
+
+.legendFont {
+    font-size: 26px;
+    color: rgb(68, 65, 65);
+    font-weight: 600;
+}
+
+.SubheadingFont {
+    font-size: 18px;
+    color: rgb(68, 65, 65);
+    font-weight: 500;
+}
+
+.menu-button {
+    transition: fill 500ms;
+}
+
+.outer-circle {
+    transform-origin: 60px 60px;
+    transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+}
+
+.button {
+    max-width: 12rem;
+    background: none;
+    border: 0 none;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.button svg {
+    width: 100%;
+    height: auto;
+}
+
+.button:hover .menu-button {
+    fill: red;
+}
+
+footer.nb-footer {
+    position: static;
+    z-index: 1;
+}
+
+.button:hover .outer-circle {
+    transform: rotate(360deg);
+}
+
+.slide {
+    margin: 0;
+}
+
+.avatar {
+    object-fit: cover;
+    height: 15vh;
+}
+
+/* Make the image fully responsive */
+
+@media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    /* For tablets: */
+    .ct-box img {
+        height: 17vh;
+    }
+
+    .card {
+        padding: 5px;
+        margin-top: 5%;
+    }
+
+    .ct-box .inner {
+        height: 20vh;
+    }
+
+    .public {
+        margin-top: 83%;
+    }
+
+    .div-right-dishes,
+    .div-left-info,
+    .div-left-comments,
+    .div-right-instagram {
+        height: 66vh;
+        padding: 0;
+    }
+
+    .button svg {
+        width: 280%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* For phones: */
+    .otherheading {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .ct-box img {
+        height: 27vh;
+    }
+
+    .divider-1 {
+        padding: 41px 0 15px 0;
+    }
+
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container>.navbar-header {
+        margin-right: 0px;
+        margin-left: 6px;
+    }
+
+    .card {
+        margin: 0%;
+    }
+
+    .public {
+        margin-top: 50%;
+    }
+
+    .div-right-dishes,
+    .div-left-info,
+    .div-left-comments,
+    .div-right-instagram {
+        height: 110vh;
+        padding: 0;
+    }
+}

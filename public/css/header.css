@@ -1,0 +1,166 @@
+:root {
+  --header_overlay: #ffffffb3;
+  --font_family: Montserrat;
+  --search_bg: white;
+  --text: white;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  color: inherit;
+  display: block;
+}
+
+.drip {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 145%;
+  z-index: 2;
+}
+
+.syrup {
+  font-size: 90px;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: var(--font_family);
+}
+
+.searchinput {
+  border: none;
+  border-width: 0;
+  box-shadow: none;
+  outline: none;
+  padding: 0.375rem 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .drip {
+    width: 65%;
+    right: 16%;
+  }
+
+  .syrup {
+    font-size: 115px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.s004 {
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(var(--header_overlay), var(--header_overlay)),
+    url("../images/header4.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+
+.s004 .search {
+  width: 100%;
+  max-width: 790px;
+  z-index: 3;
+}
+
+.s004 .search legend {
+  /* font-size: 36px; */
+  color: var(--text);
+  font-weight: 800;
+  text-align: center;
+}
+
+.s004 .search legend .syrup {
+  margin-bottom: 0px;
+}
+
+.s004 .search .inner-form {
+  margin-bottom: 17px;
+  background: var(--search_bg);
+  padding: 1.5%;
+  border-radius: 50px;
+}
+
+.s004 .search .inner-form .input-field {
+  position: relative;
+}
+
+.s004 .search .inner-form .input-field .btn-search {
+  width: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.s004 .search .inner-form .input-field .btn-search svg {
+  fill: #333;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease-out, color 0.2s ease-out;
+}
+
+.s004 .search .inner-form .input-field .btn-search:hover,
+.s004 .search .inner-form .input-field .btn-search:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.s004 .search .inner-form .input-field .btn-search:hover svg,
+.s004 .search .inner-form .input-field .btn-search:focus svg {
+  fill: #000;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+}
+
+.autocomplete-items {
+  position: absolute;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}

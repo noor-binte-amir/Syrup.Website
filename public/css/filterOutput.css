@@ -1,0 +1,142 @@
+.text-block {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 70px;
+    width: 50%;
+    height: 90%;
+}
+
+.div-right {
+    background: grey;
+    height: 90vh;
+    background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/summer-cocktails-peter-graham.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.div-left {
+    background-color: #ebc79e;
+    height: 90vh;
+}
+
+.divider-1 {
+    padding: 25px 0 15px 0;
+}
+
+.divider-1 .line {
+    width: 160px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #ccc;
+}
+
+.divPositioning {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    padding: 0%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(145, 145, 145);
+    font-size: 16px;
+    background-color: whitesmoke;
+}
+
+.div-right-dishes,
+.div-left-info {
+    margin-top: 0%;
+}
+
+.marginSetting {
+    margin-top: 0%;
+}
+
+.marginSetting {
+    margin-bottom: 0%;
+}
+
+.verticalAlignText {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: relative;
+}
+
+.imagePositioning {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    display: flex;
+}
+
+.wrap span {
+    align-self: flex-end;
+}
+
+.divPositioning .imageTranslate {
+    transition: width 2s, height 1s, transform 0.5s;
+}
+
+.divPositioning:hover > .imageTranslate {
+    transform: translate(35px, -30px);
+    filter: blur(2px);
+}
+
+ul {
+    display: inline-block;
+}
+
+.homeContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 27px;
+    font-weight: 800%;
+    font-family: "Poppins", sans-serif;
+    top: 40%;
+    height: 10%;
+}
+
+.centered {
+    position: absolute;
+}
+
+.footerbg {
+    background-image: url("images/bg.png");
+}
+
+@media only screen and (max-width: 992px) {
+    /* For tablets: */
+    .text-block {
+        font-size: 65px;
+        width: 100%;
+    }
+    .card {
+        height: 95%;
+    }
+    .div-right-dishes,
+    .div-left-info,
+    .div-left-comments,
+    .div-right-instagram {
+        height: 68vh;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* For phones: */
+    .text-block {
+        font-size: 40px;
+    }
+    .div-right-dishes,
+    .div-left-info,
+    .div-left-comments,
+    .div-right-instagram {
+        height: 100vh;
+    }
+}

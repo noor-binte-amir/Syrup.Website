@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--===============================================================================================-->
+    <!-- Comments -->
+    <link rel="stylesheet" href="css/comments.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Fancy Button -->
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- Carousel -->
+    <link rel="stylesheet" href="css/action-grid-slider.css">
+    <!-- Footer -->
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- DP Uploading -->
+    <link rel="stylesheet" href="css/uploadProfilePhoto.css">
+    <!-- Navbar -->
+    <link rel="stylesheet" href="css/nav.css">
+    <!-- Profile CSS -->
+    <link rel="stylesheet" href="css/user-profile.css">
+
+
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <nav class="header navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand brand" href="index.html"><B>SYRUP</B></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="nav-item">
+                        <a href="UserProfilePage.html" class="nav-link">My Profile</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">ABOUT <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FoodFilter.html">FOOD FILTER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Categories.html">CATEGORIES</a>
+                    </li>
+                    <!-- <li><a class="btn btn-link-3" href="Sign-in.html">LOG IN</a></li>
+                            <li><a class="btn btn-link-3" href="Sign-up.html">SIGN UP</a></li> -->
+                    <li><a id="signout" class="btn btn-link-3">SIGN OUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 divPositioning">
+                <div class=" offset-sm-4 offset-md-8 col-md-4 col-sm-6s">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="wrap-contact100 col-md-8">
+                <button class="contact100-btn-hide">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </button>
+
+                <div class="contact100-form">
+                    <span class="contact100-form-title">
+                        Change Profile Photo
+                    </span>
+                    <div id="filesubmit">
+                        <div class="container-contact100-form-btn">
+
+
+                            <label class="contact100-form-btn file-select">
+                                Choose Photo <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                <input type="file" accept="image/*"></input>
+                            </label>
+                        </div>
+                        <div class="container-contact100-form-btn">
+                            <button class="contact100-form-btn file-submit">
+                                <span>
+                                    Update
+                                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 card ">
+                <img id="#dp" class="card-img-top imageShadow" src="https://pngimage.net/wp-content/uploads/2018/06/no-user-image-png-3.png"
+                    alt="Card image">
+                <div class="card-body cardShadow">
+
+                    <div><button class="contact100-btn-show changedp" type="button"><i class="fas fa-globe-asia"
+                                aria-hidden="true"></i>&nbsp;Change
+                            Profile Photo </i></button></div>
+                    <h3 id="userName" class="card-title legendFont">User name</h3>
+                    <br />
+                    <b class="SubheadingFont">About</b>
+                    <hr>
+                    <p class="card-text">Foodie</p><br />
+                    <b class="SubheadingFont">Info</b>
+                    <hr>
+                    <div class="info">
+                        <img class="userIcons" src="https://simpleicons.org/icons/whatsapp.svg" />
+                        <span id="userContact" class="textual"><br /></span>
+                    </div>
+                    <div class="info">
+                        <img class="userIcons" src="https://simpleicons.org/icons/facebook.svg" />
+                        <span id="fbName" class="textual"><br /></span>
+                    </div>
+                    <div class="info">
+                        <img class="userIcons" src="https://simpleicons.org/icons/instagram.svg" />
+                        <span id="instaName" class="textual"><br /></span>
+                    </div>
+                </div>
+            </div>
+            <!-- <br> -->
+
+            <div class=" align-self-center text-right ct-box-slider__arrows clearfix  ml-5 col-1 d-sm-none d-md-block ">
+                <button id="ct-js-box-slider--next-1" type="button" class="slick-arrow button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+                        <g fill="none" fill-rule="evenodd">
+
+                            <circle class="inner-circle" cx="60" cy="60" r="39" fill="#FFF" />
+
+                            <path class="menu-button" fill="black" fill-rule="nonzero" d="M58.486 56.324H57.19c-.48 0-.866.387-.866.865v1.29c0 .48.387.86.865.86h1.29c.48 0 .86-.39.86-.87v-1.29c0-.48-.39-.87-.87-.87zm-4.324 0h-1.297c-.478 0-.865.387-.865.865v1.29c0 .48.387.86.865.86h1.297c.478 0 .865-.39.865-.87v-1.29c0-.48-.387-.87-.865-.87zM58.486 52H57.19c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.324 0h-1.297c-.478 0-.865.387-.865.865v1.297c0 .478.387.865.865.865h1.297c.478 0 .865-.387.865-.865v-1.297c0-.478-.387-.865-.865-.865zm12.973 4.324h-1.297c-.478 0-.865.387-.865.865v1.29c0 .48.387.86.865.86h1.297c.478 0 .865-.39.865-.87v-1.29c0-.48-.387-.87-.865-.87zm-4.324 0h-1.29c-.48 0-.86.387-.86.865v1.29c0 .48.39.86.87.86h1.3c.48 0 .87-.39.87-.87v-1.29c0-.48-.38-.87-.86-.87zM67.14 52h-1.3c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.324 0H61.52c-.48 0-.865.387-.865.865v1.297c0 .478.386.865.865.865h1.297c.48 0 .866-.387.866-.865v-1.297c0-.478-.386-.865-.864-.865zM58.49 64.973h-1.3c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.325 0h-1.297c-.478 0-.865.387-.865.865v1.297c0 .478.387.865.865.865h1.297c.478 0 .865-.387.865-.865v-1.297c0-.478-.388-.865-.866-.865zm4.324-4.324h-1.3c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.48 0 .86-.39.86-.87V61.5c0-.48-.39-.864-.87-.864zm-4.33 0h-1.3c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.472 0 .86-.39.86-.87V61.5c0-.48-.39-.864-.867-.864zm12.97 4.32h-1.29c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.48 0 .86-.39.86-.87v-1.29c0-.48-.387-.87-.865-.87zm-4.33 0h-1.29c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.3c.48 0 .862-.39.862-.87v-1.29c0-.48-.39-.87-.867-.87zm4.32-4.33h-1.3c-.48 0-.87.38-.87.86v1.3c0 .48.384.86.862.86h1.3c.476 0 .863-.39.863-.87V61.5c0-.48-.388-.864-.866-.864zm-4.33 0H61.5c-.48 0-.864.38-.864.86v1.3c0 .48.387.86.866.86H62.8c.48 0 .87-.39.87-.87V61.5c0-.48-.383-.864-.86-.864z" />
+
+                            <g class="outer-circle">
+                                <circle cx="60" cy="60" r="53" stroke="blue" transform="rotate(90 60 60)" />
+                                <circle cx="60" cy="7" r="2" fill="blue" />
+                                <circle cx="60" cy="113" r="2" fill="blue" />
+                                <circle cx="113" cy="60" r="2" fill="blue" />
+                                <circle cx="7" cy="60" r="2" fill="blue" />
+                            </g>
+
+                        </g>
+                    </svg></button>
+            </div>
+
+            <!-- Wishlist -->
+            <div id="demo" style="" class="col-md-7 carousel slide" data-ride="carousel">
+                <br /><br />
+                <p class="legendFont headingWishlist ">WISHLIST</p>
+
+                <!-- Indicators -->
+
+                <div class=" ct-box-slider-1 ct-js-box-slider row">
+                    <div class="item col-12 right" id="recyclerPanelsContainerouter1">
+                        <div class="row" id="recyclerPanelsContainerinner1">
+                        </div>
+                    </div>
+
+                    <div class="item col-12 right" id="recyclerPanelsContainerouter2">
+                        <div class="row" id="recyclerPanelsContainerinner2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid otherheading">
+        <div class="row" id="favPanelsContainer">
+            <div class="col-lg-12 ">
+                <p class="legendFont ">YOUR FAVORITES</p>
+            </div>
+
+            <div class="col-lg-12"> &nbsp&nbsp</div>
+        </div>
+        <br />
+        <hr>
+    </div>
+
+    <div class="col-lg-12"> &nbsp&nbsp</div>
+    <div class="col-lg-12"> &nbsp&nbsp</div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid otherheading">
+        <div class="row" id="recommendPanelsContainer">
+            <div class="col-lg-12">
+                <p class="legendFont">RECOMMENDED TO YOU</p>
+            </div>
+
+            <div class="col-lg-12"> &nbsp&nbsp</div>
+        </div><br /><br />
+        <hr>
+    </div>
+    <br>
+
+
+    <p class="legendFont headingWishlist otherheading">YOUR CONTRIBUTIONS</p><br>
+
+    <hr /><br>
+
+    <div class="container-fluid otherheading">
+        <div class="row">
+            <div id="demo" style="" class="col-lg-4 carousel slide" data-ride="carousel">
+                <p class="legendFont ">UPLOADS</p>
+
+                <!-- Indicators -->
+
+                <div class=" ct-box-slider-2 ct-js-box-slider row">
+                    <div class="item col-12 right" id="uploadsliderouter1">
+                        <div class="row" id="uploadsliderinner1">
+                        </div>
+                    </div>
+
+                    <div class="item col-12 right" id="uploadsliderouter2">
+                        <div class="row" id="uploadsliderinner2">
+
+                        </div>
+                    </div>
+
+
+                    <div class="item col-12 right" id="uploadsliderouter3">
+                        <div class="row" id="uploadsliderinner3">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+            <!-- Indicators -->
+
+
+
+            <div class=" align-self-center text-right ct-box-slider__arrows clearfix  ml-5 col-1 d-sm-none d-lg-block ">
+                <button id="ct-js-box-slider--next-2" type="button" class="slick-arrow button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+                        <g fill="none" fill-rule="evenodd">
+
+                            <circle class="inner-circle" cx="60" cy="60" r="39" fill="#FFF" />
+
+                            <path class="menu-button" fill="black" fill-rule="nonzero" d="M58.486 56.324H57.19c-.48 0-.866.387-.866.865v1.29c0 .48.387.86.865.86h1.29c.48 0 .86-.39.86-.87v-1.29c0-.48-.39-.87-.87-.87zm-4.324 0h-1.297c-.478 0-.865.387-.865.865v1.29c0 .48.387.86.865.86h1.297c.478 0 .865-.39.865-.87v-1.29c0-.48-.387-.87-.865-.87zM58.486 52H57.19c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.324 0h-1.297c-.478 0-.865.387-.865.865v1.297c0 .478.387.865.865.865h1.297c.478 0 .865-.387.865-.865v-1.297c0-.478-.387-.865-.865-.865zm12.973 4.324h-1.297c-.478 0-.865.387-.865.865v1.29c0 .48.387.86.865.86h1.297c.478 0 .865-.39.865-.87v-1.29c0-.48-.387-.87-.865-.87zm-4.324 0h-1.29c-.48 0-.86.387-.86.865v1.29c0 .48.39.86.87.86h1.3c.48 0 .87-.39.87-.87v-1.29c0-.48-.38-.87-.86-.87zM67.14 52h-1.3c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.324 0H61.52c-.48 0-.865.387-.865.865v1.297c0 .478.386.865.865.865h1.297c.48 0 .866-.387.866-.865v-1.297c0-.478-.386-.865-.864-.865zM58.49 64.973h-1.3c-.48 0-.866.387-.866.865v1.297c0 .478.387.865.865.865h1.29c.48 0 .86-.387.86-.865v-1.297c0-.478-.39-.865-.87-.865zm-4.325 0h-1.297c-.478 0-.865.387-.865.865v1.297c0 .478.387.865.865.865h1.297c.478 0 .865-.387.865-.865v-1.297c0-.478-.388-.865-.866-.865zm4.324-4.324h-1.3c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.48 0 .86-.39.86-.87V61.5c0-.48-.39-.864-.87-.864zm-4.33 0h-1.3c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.472 0 .86-.39.86-.87V61.5c0-.48-.39-.864-.867-.864zm12.97 4.32h-1.29c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.29c.48 0 .86-.39.86-.87v-1.29c0-.48-.387-.87-.865-.87zm-4.33 0h-1.29c-.48 0-.87.38-.87.86v1.29c0 .48.38.86.86.86h1.3c.48 0 .862-.39.862-.87v-1.29c0-.48-.39-.87-.867-.87zm4.32-4.33h-1.3c-.48 0-.87.38-.87.86v1.3c0 .48.384.86.862.86h1.3c.476 0 .863-.39.863-.87V61.5c0-.48-.388-.864-.866-.864zm-4.33 0H61.5c-.48 0-.864.38-.864.86v1.3c0 .48.387.86.866.86H62.8c.48 0 .87-.39.87-.87V61.5c0-.48-.383-.864-.86-.864z" />
+
+                            <g class="outer-circle">
+                                <circle cx="60" cy="60" r="53" stroke="blue" transform="rotate(90 60 60)" />
+                                <circle cx="60" cy="7" r="2" fill="blue" />
+                                <circle cx="60" cy="113" r="2" fill="blue" />
+                                <circle cx="113" cy="60" r="2" fill="blue" />
+                                <circle cx="7" cy="60" r="2" fill="blue" />
+                            </g>
+
+                        </g>
+                    </svg></button>
+            </div>
+
+            <div class="col-lg-5">
+
+                <section class="commentsSlider">
+
+                    <div class="row justify-content-center">
+                        <div class="comment-card div-left-comments">
+                            <div class="card">
+                                <div class="card-body"><br /><br />
+                                    <p class="card-title legendFont">COMMENTS
+                                    </p>
+
+                                    <ul class="list-group list-group-flush" id="#commentStructure">
+                                        <!-- <li class="list-group-item">
+                                            <div class="comments row">
+                                                <div class="col-11 col-lg-9">
+                                                    <div class="row">
+                                                        <h6 class="username col-12 card-subtitle">JADE CAFE</h6>
+                                                        <p class="date-posted card-text text-muted">November 12, 2017</p>
+                                                        <p class="comment card-text"><span class="user-rating"><i class="fas fa-star"></i><i
+                                                                    class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                                            Quidem deleniti quas voluptas. Perspiciatis, nihil
+                                                            repellendus?
+                                                            Nihil nemo iste minima veniam?
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li> -->
+                                    </ul>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="divider-1">
+        <div class="line"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <footer class="nb-footer footerbg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="about">
+                        <br>
+
+
+                        <img src="images/logo-dark.png" class="img-responsive center-block" alt="">
+                        <p>SYRUP is a website to help users to search for popular restuarants and places they want to
+                            visit. It provides
+                            foodies
+                            a platform to share their experience SYRUP is a website to help users to search for popular
+                            restuarants and
+                            places
+                            they want to visit. It provides foodies a platform to share their experience at different
+                            eatries and benefit
+                            others
+                            from their views.
+                        </p>
+
+                        <br>
+                        <div class="bigpixi-footer-social">
+                            <ul>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://twitter.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Twitter" title="Twitter" src="http://simpleicons.org/icons/twitter.svg">
+                                    </a> </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.facebook.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Facebook" title="Facebook" src="http://simpleicons.org/icons/facebook.svg">
+                                    </a> </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.youtube.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="YouTube" title="YouTube" src="http://simpleicons.org/icons/youtube.svg">
+                                    </a> </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.instagram.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Instagram" title="Instagram" src="http://simpleicons.org/icons/instagram.svg">
+                                    </a> </li>
+                                <li class="bigpixi-footer-social__list-item">
+                                    <a class="bigpixi-footer__icon-link" rel="nofollow" href="https://www.pinterest.com/">
+                                        <img class="bigpixi-footer-social__icon" alt="Pinterest" title="Pinterest" src="http://simpleicons.org/icons/pinterest.svg">
+                                    </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Help Center</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Features</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Site Info</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Customer information</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Your Items</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Your blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Security & privacy</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li>
+                            <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sponser / User privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 15%">
+                    <div class="footer-info-single">
+                        <h2 class="title">Payments</h2>
+                        <p>All payments are to be made through online bank tranfer no easy paisa or cash on delivery is
+                            accepted.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12" style="text-align:center">
+                        <p>Copyright © 2018. All rights reserved for SYRUP</p>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!--===============================================================================================-->
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script src="js/app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- JQuery  -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Popper  -->
+    <script src="js/popper.js"></script>
+    <!-- Form  -->
+    <script src="js/form.js"></script>
+    <!-- Bootstrap  -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- Fancy Button  -->
+    <script src="js/slick.min.js"></script>
+    <!-- Carousel  -->
+    <script src="js/gridslider.js"></script>
+    <!-- Navbar  -->
+    <script src="js/nav.js"></script>
+    <!-- User Profile JS  -->
+    <script src="js/userprofile.js"></script>
+    <!--===============================================================================================-->
+</body>
+
+</html>

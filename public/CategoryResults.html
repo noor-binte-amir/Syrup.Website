@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="colorlib.com" />
+        <title>Filter Results</title>
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+            integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+            crossorigin="anonymous"
+        />
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+
+        <link href="css/footer.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/restaurant.css" />
+
+        <link href="css/home-page.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/filterOutput.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/nav.css" />
+
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+        <script src="js/app.js"></script>
+
+        <!-- Optional JavaScript -->
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/nav.js"></script>
+    </head>
+
+    <body>
+        <nav class="header navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand brand" href="index.html"><b>SYRUP</b></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarsExample07"
+                    aria-controls="navbarsExample07"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="nav-item">
+                            <a href="UserProfilePage.html" class="nav-link">My Profile</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-auto"></ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html"
+                                >ABOUT <span class="sr-only">(current)</span></a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FoodFilter.html">FOOD FILTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Categories.html">CATEGORIES</a>
+                        </li>
+                        <li><a class="btn btn-link-3" href="Sign-in.html">LOG IN</a></li>
+                        <li><a class="btn btn-link-3" href="Sign-up.html">SIGN UP</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="d-none d-lg-block col-lg-6 div-left"></div>
+                <div class="col-sm-12 col-lg-6 div-right"></div>
+                <div class="text-block">CATEGORIES</div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="divider-1"><div class="line"></div></div>
+        <br />
+        <br />
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="Categories.html">
+                        <h4><b>BACK</b></h4>
+                    </a>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="info-card  col-sm-10 col-md-11 col-lg-5">
+                        <h1 class="card-title" id="card-title">Category Name</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br />
+        <br />
+
+        <div class="container-fluid">
+            <div class="row marginSetting">
+                <div class="col-10 mx-auto">
+                    <div class="row" id="panelsContainer">
+                        <!-- The panels will be appended to this div -->
+                        <!--
+                            For Hamna : Container should be empty at first. The Items will be appended to the div above
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="divider-1"><div class="line"></div></div>
+        <br />
+        <br />
+
+        <footer class="nb-footer footerbg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="about">
+                            <br />
+
+                            <img
+                                src="images/logo-dark.png"
+                                class="img-responsive center-block"
+                                alt=""
+                            />
+                            <p>
+                                SYRUP is a website to help users to search for popular restuarants
+                                and places they want to visit. It provides foodies a platform to
+                                share their experience SYRUP is a website to help users to search
+                                for popular restuarants and places they want to visit. It provides
+                                foodies a platform to share their experience at different eatries
+                                and benefit others from their views.
+                            </p>
+
+                            <br />
+                            <div class="bigpixi-footer-social">
+                                <ul>
+                                    <li class="bigpixi-footer-social__list-item">
+                                        <a
+                                            class="bigpixi-footer__icon-link"
+                                            rel="nofollow"
+                                            href="https://twitter.com/"
+                                        >
+                                            <img
+                                                class="bigpixi-footer-social__icon"
+                                                alt="Twitter"
+                                                title="Twitter"
+                                                src="http://simpleicons.org/icons/twitter.svg"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li class="bigpixi-footer-social__list-item">
+                                        <a
+                                            class="bigpixi-footer__icon-link"
+                                            rel="nofollow"
+                                            href="https://www.facebook.com/"
+                                        >
+                                            <img
+                                                class="bigpixi-footer-social__icon"
+                                                alt="Facebook"
+                                                title="Facebook"
+                                                src="http://simpleicons.org/icons/facebook.svg"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li class="bigpixi-footer-social__list-item">
+                                        <a
+                                            class="bigpixi-footer__icon-link"
+                                            rel="nofollow"
+                                            href="https://www.youtube.com/"
+                                        >
+                                            <img
+                                                class="bigpixi-footer-social__icon"
+                                                alt="YouTube"
+                                                title="YouTube"
+                                                src="http://simpleicons.org/icons/youtube.svg"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li class="bigpixi-footer-social__list-item">
+                                        <a
+                                            class="bigpixi-footer__icon-link"
+                                            rel="nofollow"
+                                            href="https://www.instagram.com/"
+                                        >
+                                            <img
+                                                class="bigpixi-footer-social__icon"
+                                                alt="Instagram"
+                                                title="Instagram"
+                                                src="http://simpleicons.org/icons/instagram.svg"
+                                            />
+                                        </a>
+                                    </li>
+                                    <li class="bigpixi-footer-social__list-item">
+                                        <a
+                                            class="bigpixi-footer__icon-link"
+                                            rel="nofollow"
+                                            href="https://www.pinterest.com/"
+                                        >
+                                            <img
+                                                class="bigpixi-footer-social__icon"
+                                                alt="Pinterest"
+                                                title="Pinterest"
+                                                src="http://simpleicons.org/icons/pinterest.svg"
+                                            />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                        <div class="footer-info-single">
+                            <h2 class="title">Help Center</h2>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Features</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> FAQ's</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Sitemap</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Site Info</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                        <div class="footer-info-single">
+                            <h2 class="title">Customer information</h2>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> About Us</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> FAQ's</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Your Items</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Contact Us</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Your blogs</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6" style="margin-bottom: 5%">
+                        <div class="footer-info-single">
+                            <h2 class="title">Security & privacy</h2>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Terms Of Use</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Privacy Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Return / Refund
+                                        Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" title=""
+                                        ><i class="fa fa-angle-double-right"></i> Sponser / User
+                                        privacy</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6" style="margin-bottom: 15%">
+                        <div class="footer-info-single">
+                            <h2 class="title">Payments</h2>
+                            <p>
+                                All payments are to be made through online bank tranfer no easy
+                                paisa or cash on delivery is accepted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12" style="text-align:center">
+                            <p>Copyright © 2018. All rights reserved for SYRUP</p>
+                        </div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <script>
+            const db = firebase.database().ref(); // Get the Database Ref at Root
+
+            // Get the elements that need to be directly changed or appended to
+            var category_title = document.getElementById('card-title'); // will change text of this dynamically/
+            var panelsContainer = document.getElementById('panelsContainer'); // will inject restaurants panels into this dynamically\
+
+            var category = localStorage.getItem('categoryToSearch'); // Hard Code Category for now. In future this will be sent dynamically by user when choosing category.
+            category_title.innerText = category; // Changed The category title. Will change dynamically in future.
+
+            // This is the strcuture of one panel that I had to make -- For Hamna --
+
+            // <div class="col-md-3 col-6 divPositioning wrap">
+            //         <ul class="verticalAlignText">
+            //             <li>SUSHI</li>
+            //         </ul>
+
+            //         <img
+            //             class="centered imageTranslate imagePositioning img-fluid"
+            //             src="https://firebasestorage.googleapis.com/v0/b/syrup-6e640.appspot.com/o/Restaurant%20Panels%2FKFC.jpg?alt=media&token=96279276-e4a7-482e-9900-59ee716c7ddf"
+            //         />
+            //         <p class="homeContainer">
+            //             <b>The Chinese Cafe'</b>
+            //         </p>
+
+            //         <span> THE CHINESE CAFE </span>
+            // </div>
+
+            // Start Query
+            db.child('Categories/' + category).once('value', function(snapNames) {
+                var i = 0;
+
+                snapNames.forEach(function(childName) {
+                    // childName loops through the list of Resturant Names Recieved under the category.
+                    db.child('Restaurants/' + childName.key).once(
+                        // The I Get the data of just that restaurant (childName) in the Resturants Table.
+                        'value',
+                        function(resSnaps) {
+                            // Here I have the data of Exactly one Resturant.
+                            // This loop will have specific data everytime the outer loop chnages the child name childName.
+                            const restaurantData = resSnaps.val(); // extract data
+
+                            // Log for debugging
+                            console.log(resSnaps.key);
+                            console.log(restaurantData['category']);
+                            console.log(restaurantData['image']);
+
+                            //  -- Folow Steps in This Order Please --
+
+                            // Create Elements  -- For Hamna --
+                            var div = document.createElement('div');
+                            var ul = document.createElement('ul');
+                            var li = document.createElement('li');
+                            var img = document.createElement('img');
+                            var p = document.createElement('p');
+                            var b = document.createElement('b');
+                            var span = document.createElement('span');
+
+                            // Attach Classes -- For Hamna --
+                            div.classList.add('col-md-3', 'col-6', 'divPositioning', 'wrap');
+                            ul.classList.add('verticalAlignText');
+                            li.innerText = restaurantData['speciality'].toUpperCase();
+                            img.classList.add(
+                                'centered',
+                                'imageTranslate',
+                                'imagePositioning',
+                                'img-fluid'
+                            );
+                            img.src = restaurantData['image'];
+                            p.classList.add('homeContainer');
+                            b.innerText = resSnaps.key;
+                            span.innerText = resSnaps.key.toUpperCase();
+
+                            // Structure Properly -- For Hamna --
+                            // Append things in proper order for example.
+                            ul.appendChild(li); // first the li to the ul
+                            div.appendChild(ul); // then the ul to the div.
+                            div.appendChild(img);
+                            p.appendChild(b);
+                            div.appendChild(p);
+                            div.appendChild(span);
+
+                            // Appending to Container
+                            panelsContainer.appendChild(div);
+                        }
+                    );
+                });
+            });
+        </script>
+    </body>
+</html>

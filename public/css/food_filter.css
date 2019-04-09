@@ -1,0 +1,300 @@
+.time-filter,
+.category-filter,
+.spice-filter,
+.price-filter {
+    /* margin: 10% 0; */
+    /* padding-top: 5%; */
+}
+.time-image {
+    width: 80%;
+    padding-right: 10%;
+}
+.spice-image {
+    padding-right: 5%;
+}
+.category-image {
+    padding-left: 5%;
+}
+.price-image {
+    padding-top: 5%;
+}
+
+.btn {
+    background-color: #2f323a;
+    border-radius: 10px;
+    padding: 2%;
+    color: white;
+    font-weight: bold;
+}
+
+.vl {
+    border-left: 2px dashed darksalmon;
+    height: 110vh;
+    position: absolute;
+}
+
+.lastvl {
+    height: 230vh;
+}
+
+.category-filter .category {
+    margin: 1% 0;
+}
+.category-filter .categories {
+    margin-top: -5%;
+}
+.spice-filter * {
+    margin: 1% 0;
+}
+/* .price-filter * {
+    margin: 1% 0;
+} */
+.menu-image-container,
+.menu {
+    text-align: center;
+}
+
+.menu-image-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../images/menu-image.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+.menu-image-container p,
+.menu-image-container h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.menu-image-container p {
+    font-size: 25px;
+}
+
+.fields-container {
+    height: 100%;
+}
+/* .location-filter * {
+} */
+
+/*  RADIO BUTTONS CSS */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+body,
+html {
+    height: 100%;
+    /* background: #222222; */
+    font-family: "Lato", sans-serif;
+}
+
+.container-fluid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.container-fluid ul li {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #333;
+}
+
+.container-fluid ul li input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.container-fluid ul li label {
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.35em;
+    padding: 25px 25px 25px 80px;
+    margin: 10px auto;
+    height: 30px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    color: #2f323a;
+    font-weight: 700;
+}
+
+.container-fluid ul li:hover label {
+    /* color: #ffffff; */
+}
+
+.container-fluid ul li .check {
+    display: block;
+    position: absolute;
+    border: 5px solid #e9724c;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    top: 30px;
+    left: 20px;
+    z-index: 5;
+    transition: border 0.25s linear;
+    -webkit-transition: border 0.25s linear;
+}
+.input-group-text {
+    background-color: #e9724c;
+    color: white;
+}
+
+.container-fluid ul li:hover .check {
+    /* border: 5px solid #ffffff; */
+}
+
+.container-fluid ul li .check::before {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+}
+
+input[type="radio"]:checked ~ .check {
+    border: 0px solid firebrick;
+}
+
+input[type="radio"]:checked ~ .check::before {
+    background: firebrick;
+}
+
+input[type="radio"]:checked ~ label {
+    color: firebrick;
+    background-color: #fae8cd;
+    height: 12vh;
+}
+
+/* ICONS CHECKBOXES CSS */
+
+label {
+    border: 1px solid rgba(#003459, 0.15);
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 20px 10px 0px 10px;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: all 0.5s ease-in-out;
+    color: #e73c37;
+    font-weight: bold;
+}
+label:hover,
+label:focus,
+label:active {
+    border: 5px solid rgba(salmon, 0.5);
+}
+
+/* Input style */
+
+input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input[type="checkbox"]:active ~ label {
+    opacity: 1;
+}
+
+input[type="checkbox"]:checked ~ label {
+    opacity: 1;
+    border: 5px solid #e9724c;
+}
+
+section.scroll {
+    /* height: 100vh; */
+}
+
+h1 {
+    color: #2f323a;
+    font-family: "Helvetica", Montserrat;
+    font-weight: 700;
+}
+
+.restaurant_food_image {
+    height: 100vh;
+}
+
+@media only screen and (max-width: 992px) {
+    /* For tablets: */
+    .custom-control {
+        padding-left: 0rem;
+    }
+    .fas {
+        padding-top: 10%;
+    }
+    .vl {
+        border: 0px;
+    }
+    .time-image {
+        width: 60%;
+        padding: 0%;
+    }
+    input[type="radio"]:checked ~ label {
+        height: 8vh;
+    }
+    .category-image {
+        width: 80%;
+    }
+    .spice-image {
+        width: 70%;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* For phones: */
+    .time-image {
+        width: 80%;
+        padding: 10%;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+    input[type="radio"]:checked ~ label {
+        color: firebrick;
+        background-color: #fae8cd;
+        height: 10vh;
+    }
+    .category-image {
+        width: 90%;
+    }
+    label {
+        width: 90%;
+        height: 90%;
+    }
+    .spice-image {
+        width: 70%;
+        padding: 0%;
+    }
+    .price {
+        width: 108%;
+        height: 100%;
+        padding: 20px 14px 0px 0px;
+    }
+    .custom-control {
+        padding-left: 0.5rem;
+    }
+    .btn {
+        padding: 5%;
+    }
+}

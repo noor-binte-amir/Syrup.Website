@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact V6</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<!--===============================================================================================-->
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+	<!--===============================================================================================-->
+
+</head>
+
+<body>
+	<script>
+		var config = {
+    apiKey: "AIzaSyBerqgdPGGc4xkX-GSju3Xnxcla3vU_jU4",
+    authDomain: "syrup-6e640.firebaseapp.com",
+    databaseURL: "https://syrup-6e640.firebaseio.com",
+    projectId: "syrup-6e640",
+    storageBucket: "syrup-6e640.appspot.com",
+    messagingSenderId: "428019578808"
+	};
+	firebase.initializeApp(config);
+
+	function handleRestaurantForm() {
+
+		var res_details = firebase.database().ref().child("Restaurant Details");
+		console.log(res_details);
+
+		// Get input values from each of the form elements
+		var displayName = document.getElementById('resname').value;
+		var displayAddress = document.getElementById('resaddress').value;
+		var displayContact = document.getElementById('rescontact').value;
+		var displayTiming = document.getElementById('restiming').value;
+		var displayStatus = document.getElementById('resstatus').value;
+		var displayLink = document.getElementById('reslink').value;
+		var displayAmbience = document.getElementById('resambience').value;
+		var displayPresentation = document.getElementById('respresentation').value;
+		var displayTaste = document.getElementById('restaste').value;
+		var displaySpice = document.getElementById('resspice').value;
+		var displayPrice = document.getElementById('resprice').value;
+		var displayValue = document.getElementById('resvalue').value;
+		var displayRating = document.getElementById('resrating').value;
+		var displayDescription = document.getElementById('resdescription').value;
+
+		// Set a new recommendation to the database using those values
+		var restaurant = res_details.child(displayName);
+		if(displayAddress && displayContact && displayTiming && displayStatus && displayLink && displayDescription != ""){
+			restaurant.set({
+				"address": displayAddress,
+				"phone": displayContact,
+				"timings": displayTiming,
+				"status": displayStatus,
+				"link": displayLink,
+				"ambiance": displayAmbience,
+				"presentation": displayPresentation,
+				"taste": displayTaste,
+				"spice": displaySpice,
+				"price": displayPrice,
+				"value": displayValue,
+				"rating": displayRating,
+				"description": displayDescription
+			});
+		}
+
+	}
+
+	function initApp() {
+		// Listening for auth state changes.
+		// [START authstatelistener]
+		// firebase.auth().onAuthStateChanged(function (user) {
+		// 	// [START_EXCLUDE silent]
+		// 	// document.getElementById('quickstart-verify-email').disabled = true;
+		// 	// [END_EXCLUDE]
+		// 	if (user) {
+		// 		// User is signed in.
+		// 		var displayName = user.displayName;
+		// 		var email = user.email;
+		// 		var uid = user.uid;
+
+		// 		window.location.href = "UserProfilePage.html";
+
+		// 	}
+		// });
+
+		document.getElementById('submitbtn').addEventListener('click', handleRestaurantForm, false);
+	}
+	window.onload = function () {
+		initApp();
+	};
+</script>
+
+
+	<div class="container-contact100">
+
+		<button class="contact100-btn-show">
+			<i class="fa fa-envelope-o" aria-hidden="true"></i>
+		</button>
+
+		<div class="wrap-contact100">
+			<button class="contact100-btn-hide">
+				<i class="fa fa-close" aria-hidden="true"></i>
+			</button>
+
+			<div class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Restaurant Information
+				</span>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+					<span class="label-input100">Restaurant Name</span>
+					<input id="resname" class="input100" type="text" name="name" placeholder="Enter retaurant name">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Address is required">
+					<span class="label-input100">Address</span>
+					<input id="resaddress" class="input100" type="text" name="name" placeholder="Enter Restaurant Address">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Phone number is required">
+					<span class="label-input100">Contact Information</span>
+					<input id="rescontact" class="input100" type="tel" name="name" placeholder="Enter contact information">
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Timing is required">
+					<span class="label-input100">Timings</span>
+					<input id="restiming" class="input100" type="text" name="name" placeholder="Enter Restaurant Timings">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Status is required">
+					<span class="label-input100">Status</span>
+					<input id="resstatus" class="input100" type="text" name="name" placeholder="Enter Restaurant Status">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Link is required">
+					<span class="label-input100">Link</span>
+					<input id="reslink" class="input100" type="text" name="name" placeholder="Enter Restaurant Link">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Link is required">
+					<span class="label-input100">Ambience</span>
+					<input id="resambience" class="input100" type="text" name="name" placeholder="Enter Restaurant Ambience">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Link is required">
+					<span class="label-input100">Presentation</span>
+					<input id="respresentation" class="input100" type="text" name="name" placeholder="Enter Restaurant Presentation">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Link is required">
+					<span class="label-input100">Taste</span>
+					<input id="restaste" class="input100" type="text" name="name" placeholder="Enter food Taste">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Link is required">
+					<span class="label-input100">Spice</span>
+					<input id="resspice" class="input100" type="text" name="name" placeholder="Enter spice level">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Link is required">
+					<span class="label-input100">Price</span>
+					<input id="resprice" class="input100" type="text" name="name" placeholder="Enter food price">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Link is required">
+					<span class="label-input100">Value</span>
+					<input id="resvalue" class="input100" type="text" name="name" placeholder="Enter Restaurant value">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Link is required">
+					<span class="label-input100">Rating</span>
+					<input id="resrating" class="input100" type="text" name="name" placeholder="Enter Restaurant Rating">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Message is required">
+					<span class="label-input100">Description</span>
+					<textarea id="resdescription" class="input100" name="message" placeholder="Restaurant description here..."></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button id="submitbtn" class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+	<!--===============================================================================================-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="bootstrap/js/popper.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/form.js"></script>
+
+</body>
+
+</html>
