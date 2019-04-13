@@ -12,4 +12,6 @@ Profile Page               |  Food Filter
 :-------------------------:|:-------------------------:
 ![Syrup Profile Page](public/screenshots/ProfilePage.png?raw=true "Profile") |  ![Syrup Food Filter](public/screenshots/Filter.png?raw=true "FoodFilter")
 
-
+About Section 1              |  About Section 2       
+:-------------------------:|:-------------------------:
+![Syrup About Page](public/screenshots/AboutPage.png?raw=true "About") |  ![Syrup About Page](public/screenshots/AboutPage-2.png?raw=true "About")
