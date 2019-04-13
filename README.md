@@ -10,6 +10,6 @@ Home Page                  |  Restaurant Page         |  Menu Page
 
 Profile Page               |  Food Filter       
 :-------------------------:|:-------------------------:
-![Syrup Profile Page](public/screenshots/ProfilePage.png?raw=true "Profile") |  ![Syrup Food Filter](public/screenshots/FoodFilter.png?raw=true "FoodFilter")
+![Syrup Profile Page](public/screenshots/ProfilePage.png?raw=true "Profile") |  ![Syrup Food Filter](public/screenshots/Filter.png?raw=true "FoodFilter")
 
 
