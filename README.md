@@ -3,13 +3,13 @@
 # Syrup.Website
 A food review site built using firebase as backend.
 
-##Getting Started
+## Getting Started
 Clone the repository to open public/index.html to try out the website.
 
-##Prerequisites
+## Prerequisites
 None
 
-##Built With
+## Built With
 * HTML
 * CSS
 * Javascript
